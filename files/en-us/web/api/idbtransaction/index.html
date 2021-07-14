@@ -9,6 +9,7 @@ tags:
   - Interface
   - Reference
   - Storage
+browser-compat: api.IDBTransaction
 ---
 <div>{{APIRef("IndexedDB")}}</div>
 
@@ -95,13 +96,12 @@ objectStore1.put("1", "key");
 
 <h2 id="Mode_constants">Mode constants</h2>
 
-<div>
-<div>{{ deprecated_header(13) }}</div>
+<div>{{Deprecated_Header}}</div>
 
 <div class="warning">
 <p>These constants are no longer available — they were removed in Gecko 25. You should use the string constants directly instead. ({{ bug(888598) }})</p>
 </div>
-</div>
+
 
 <p>Transactions can have one of three modes:</p>
 
@@ -199,31 +199,11 @@ function addData() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#transaction', 'IDBTransaction')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td>Initial definition</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("IndexedDB 2", "#transaction", "IDBTransaction")}}</td>
-   <td>{{Spec2("IndexedDB 2")}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IDBTransaction")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
