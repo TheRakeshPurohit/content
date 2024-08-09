@@ -40,7 +40,7 @@ position-anchor: unset;
 
 This property is only relevant to "positioned" elements — elements and pseudo elements that have a {{cssxref("position")}} of `absolute` or `fixed` set.
 
-To position an element relative to an anchor element, the positioned element requires three features: an association, a position, and a location. The `position-anchor` and {{htmlelement("anchor-name")}} properties provide the association.
+To position an element relative to an anchor element, the positioned element requires three features: an association, a position, and a location. The `position-anchor` and {{cssxref("anchor-name")}} properties provide the association.
 
 The anchor element accepts one or more `<dashed-ident>` anchor names set on it via the `anchor-name` property. When one of those names is then set as the value of the positioned element's `position-anchor` property, the two elements are associated.
 
@@ -156,8 +156,8 @@ We have four anchors and two positioned elements, distinguished with different `
 
 <div class="infobox" id="infobox1">
   <form>
-    <label for="myanchor1-anchor-select">Place infobox on:</label>
-    <select id="myanchor1-anchor-select">
+    <label for="anchor1-anchor-select">Place infobox on:</label>
+    <select id="anchor1-anchor-select">
       <option value="1">Anchor 1</option>
       <option value="2">Anchor 2</option>
       <option value="3">Anchor 3</option>
@@ -168,8 +168,8 @@ We have four anchors and two positioned elements, distinguished with different `
 
 <div class="infobox" id="infobox2">
   <form>
-    <label for="myanchor2-anchor-select">Place infobox on:</label>
-    <select id="myanchor2-anchor-select">
+    <label for="anchor2-anchor-select">Place infobox on:</label>
+    <select id="anchor2-anchor-select">
       <option value="1">Anchor 1</option>
       <option value="2">Anchor 2</option>
       <option value="3">Anchor 3</option>
@@ -215,7 +215,7 @@ body {
 }
 ```
 
-Each of the positioned elements is given a {{cssxref("position-anchor")}} property with a value matching one of the two anchor names. The positioned elements are then given anchor-relative positioning information using a combination of inset, alignment, and margin properties.
+Each of the positioned elements is given a `position-anchor` property with a value matching one of the two anchor names. The positioned elements are then given anchor-relative positioning information using a combination of inset, alignment, and margin properties.
 
 ```css hidden
 .infobox {
@@ -253,8 +253,8 @@ We dynamically change which anchor elements the `anchor-name` values are set on 
 
 ```js
 // Get references to the two select menus
-const select1 = document.querySelector("#myanchor1-anchor-select");
-const select2 = document.querySelector("#myanchor2-anchor-select");
+const select1 = document.querySelector("#anchor1-anchor-select");
+const select2 = document.querySelector("#anchor2-anchor-select");
 // Store references to all the anchors in a NodeList (array-like)
 const anchors = document.querySelectorAll("#anchor-container > div");
 
@@ -263,7 +263,7 @@ select1.addEventListener("change", updateAnchorNames);
 select2.addEventListener("change", updateAnchorNames);
 
 function updateAnchorNames() {
-  // Remove all anchor names fomr all anchors
+  // Remove all anchor names from all anchors
   for (const anchor of anchors) {
     anchor.style.anchorName = "none";
   }
